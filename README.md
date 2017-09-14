@@ -2,7 +2,7 @@
 Use powershell create custom event while activate send out gmail notification
 
 All credit goes to Nicolas Prigent and his awesome blog [PowerShell Day-to-Day SysAdmin Tasks: Events and Monitoring](https://www.red-gate.com/simple-talk/sysadmin/powershell/powershell-day-to-day-sysadmin-tasks-events-and-monitoring/) 
-======
+------
 
 By creating a custom powershell script and attach it with a log file from event viewer we are able to demonstrate instant gmail notification when an event was triggered in a Windows 7 machine.
 
