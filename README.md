@@ -20,9 +20,8 @@ Write-EventLog -LogName 'Simple-Talk' -Source 'PowerShellArticle' -EventId 60000
 
 ![screen shot 2017-09-14 at 1 36 53 pm](https://user-images.githubusercontent.com/5915590/30447486-eaf2e464-9951-11e7-869c-3fd3e5c63492.png)
 
-**(!!!If your custom message doesn't show up correctly or it shows "Event ID source can't be found....." meaning the DLL is not at its correct place. Please follow this link [The description for Event ID ( XXX ) in Source ( Symantec ) cannot be found](https://support.symantec.com/en_US/article.TECH99678.html) and copy the EventLogMessages.dll to its reference place. In my case, its locate under C:\Windows\Microsoft.NET\Framework\v4.0.30319\EventLogMessages.dll_)_** 
+**(!!!If your custom message doesn't show up correctly or it shows "Event ID source can't be found....." meaning the DLL is not at its correct place. Please follow this link [The description for Event ID ( XXX ) in Source ( Symantec ) cannot be found](https://support.symantec.com/en_US/article.TECH99678.html) and copy the EventLogMessages.dll to its reference place. In my case, its locate under C:\Windows\Microsoft.NET\Framework\v4.0.30319\EventLogMessages.dll)** 
 
-**asterisks and _underscores_**
 
 Second we create a html file which will be an attchment for our notification email. Through the html format we can sort all reports in future for reference in order to find the tendency and frequency for the problem.
 
