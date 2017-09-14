@@ -101,5 +101,7 @@ Write-EventLog -LogName 'Simple-Talk' -Source 'PowerShellArticle' -EventId 60000
 
 Ta-Da!
 
+![screen shot 2017-09-14 at 2 11 16 pm](https://user-images.githubusercontent.com/5915590/30450336-04eb32d6-9957-11e7-9404-56f8e0687811.png)
 
+![screen shot 2017-09-14 at 2 11 55 pm](https://user-images.githubusercontent.com/5915590/30450345-097f35ae-9957-11e7-9fc3-169103607049.png)
 
