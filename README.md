@@ -87,6 +87,12 @@ else
          }      
 ```
 
+If both scripts work correctly then we combine them together. I have it saved as the file "custom_event_gmail.ps1"
+
+Very last part we attached this script to the custom event we just created in event viewer. You can check if it got created correctly in task scheduler.
+
+
+
 
 ```powershell
 
