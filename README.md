@@ -40,7 +40,52 @@ write-host "Create CSS file at C:\LogAppView1.html"
 
 ![screen shot 2017-09-14 at 1 52 04 pm](https://user-images.githubusercontent.com/5915590/30448269-f359d4da-9953-11e7-8477-5dbc870f7f71.png)
 
+Third, we write the script for sending email notification through a relay gmail. The very last part is pause for debug you can comment it out when everything work as it suppose to be.
 
+```powershell
+$event = Get-WinEvent -FilterHashTable @{logname='Simple-Talk' ;ID='60000'} -MaxEvents 1 
+if ($event.LevelDisplayName -eq "Information") 
+{
+	$SMTPServer = "smtp.gmail.com"
+	$SMTPPort = "587" 
+	$Username = "$YOUR_RELAY_EMAIL"
+	$Password = "$RELAY_EMAIL_PASSWORD"
+	
+        $to = "$TARGET_EMAIL"                                                                                                                         
+	$cc = "$CC_EMAIL"
+	$subject = "Custom event was found!"                                                                                                                                 
+	$body = $event
+	$body = $event.Message
+	$attachment = "C:\LogAppView1.html"            
+  
+	$message = New-Object System.Net.Mail.MailMessage                                                                                                                     
+	$message.subject = $subject
+	$message.body = $body                                                                                                                                      
+	$message.to.add($to)
+	$message.cc.add($cc)                                                                                                                                       
+	$message.from = $username
+	$message.attachments.add($attachment)   
+
+	$smtp = New-Object System.Net.Mail.SmtpClient($SMTPServer, $SMTPPort);                                                                                     
+	$smtp.EnableSSL = $true
+	$smtp.Credentials = New-Object System.Net.NetworkCredential($Username, $Password);                                                                         
+	$smtp.send($message)
+	write-host "Mail Sent" 
+}
+else
+{
+    Write-host "No event found. Here is the log entry that was inspected:"
+    $event
+}
+
+
+# For debug, take it out when no need                                                                                                     
+ if ($Host.Name -eq "ConsoleHost")                                                                                                                               
+{                                                                                
+     Write-Host "Press any key to continue..."                                                                                                                   
+         $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyUp") > $null                                                                                                       
+         }      
+```
 
 
 ```powershell
