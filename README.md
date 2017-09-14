@@ -93,6 +93,13 @@ Very last part we attached this script to the custom event we just created in ev
 
 ![screen shot 2017-09-14 at 2 02 43 pm](https://user-images.githubusercontent.com/5915590/30449806-d8b9de98-9955-11e7-90c4-bc39df82f50a.png)
 
-```powershell
+Finally, we do a Write-EvenLog to simulate realtime Windows events occurring situation.  
 
+```powershell
+Write-EventLog -LogName 'Simple-Talk' -Source 'PowerShellArticle' -EventId 60000 -EntryType Information -Message 'It works!!!' 
 ```
+
+Ta-Da!
+
+
+
