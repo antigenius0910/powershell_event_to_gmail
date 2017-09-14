@@ -17,3 +17,32 @@ Write-EventLog -LogName 'Simple-Talk' -Source 'PowerShellArticle' -EventId 60000
 
 ![screen shot 2017-09-14 at 1 36 53 pm](https://user-images.githubusercontent.com/5915590/30447486-eaf2e464-9951-11e7-869c-3fd3e5c63492.png)
 
+(!!!If your custom message doesn't show up correctly or it shows "Event ID source can't be found....." meaning the DLL is not at its correct place. Please follow this link [The description for Event ID ( XXX ) in Source ( Symantec ) cannot be found](https://support.symantec.com/en_US/article.TECH99678.html) and copy the EventLogMessages.dll to its reference place. In my case, its locate under C:\Windows\Microsoft.NET\Framework\v4.0.30319\EventLogMessages.dll)
+
+Second we create a html file which will be an attchment for our notification email. Through the html format we can sort all reports in future for reference in order to find the tendency and frequency for the problem.
+
+```powershell
+### create CSS style
+$css= "<style>"
+$css= $css+ "BODY{ text-align: center; background-color:white;}"
+$css= $css+ "TABLE{    font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif;font-size: 12px;margin: 10px;width: 100%;text-align: center;border-collapse: collapse;border-top: 7px solid #004466;border-bottom: 7px solid #004466;}"
+$css= $css+ "TH{font-size: 13px;font-weight: normal;padding: 1px;background: #cceeff;border-right: 1px solid #004466;border-left: 1px solid #004466;color: #004466;}"
+$css= $css+ "TD{padding: 1px;background: #e5f7ff;border-right: 1px solid #004466;border-left: 1px solid #004466;color: #669;hover:black;}"
+$css= $css+  "TD:hover{ background-color:#004466;}"
+$css= $css+ "</style>" 
+ 
+$StartDate = (get-date).adddays(-1) 
+$body = Get-WinEvent -FilterHashtable @{logname="Simple-Talk"; starttime=$StartDate} -ErrorAction SilentlyContinue
+$body | ConvertTo-HTML -Head $css MachineName,ID,TimeCreated,Message > C:\LogAppView1.html 
+write-host "Create CSS file at C:\LogAppView1.html"
+####
+```
+
+
+
+
+
+
+```powershell
+
+```
