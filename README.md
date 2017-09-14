@@ -91,9 +91,7 @@ If both scripts work correctly then we combine them together. I have it saved as
 
 Very last part we attached this script to the custom event we just created in event viewer. You can check if it got created correctly in task scheduler.
 
-![screen shot 2017-09-14 at 2 02 43 pm](https://user-images.githubusercontent.com/5915590/30449480-8ccc2784-9955-11e7-849a-d8ab07b0386a.png)
-
-![screen shot 2017-09-14 at 2 02 43 pm](https://user-images.githubusercontent.com/5915590/30449480-8ccc2784-9955-11e7-849a-d8ab07b0386a.png)
+![screen shot 2017-09-14 at 2 02 43 pm](https://user-images.githubusercontent.com/5915590/30449806-d8b9de98-9955-11e7-90c4-bc39df82f50a.png)
 
 ```powershell
 
