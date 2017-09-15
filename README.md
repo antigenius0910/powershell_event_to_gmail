@@ -103,7 +103,7 @@ Finally, we do a Write-EvenLog to simulate realtime Windows events occurring sit
 Write-EventLog -LogName 'Simple-Talk' -Source 'PowerShellArticle' -EventId 60000 -EntryType Information -Message 'It works!!!' 
 ```
 
-Ta-Da! now I am able to receive notifications when Windows events were triggered in realtime!
+Ta-Da! now I am able to receive notifications when Windows events got triggered in real time!
 
 ![screen shot 2017-09-14 at 6 55 24 pm](https://user-images.githubusercontent.com/5915590/30460751-654212d6-997e-11e7-9712-4f6d67089e78.png)
 
