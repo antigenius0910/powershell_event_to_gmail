@@ -1,5 +1,5 @@
 # powershell_event_to_gmail
-Use powershell create custom event while activate send out gmail notification
+Use powershell to create a custom event scrpt while triggered send out gmail notification
 
 All credit goes to Nicolas Prigent and his awesome blog [PowerShell Day-to-Day SysAdmin Tasks: Events and Monitoring](https://www.red-gate.com/simple-talk/sysadmin/powershell/powershell-day-to-day-sysadmin-tasks-events-and-monitoring/) 
 ------
