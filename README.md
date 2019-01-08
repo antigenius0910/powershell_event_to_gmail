@@ -106,5 +106,4 @@ Ta-Da! now I am able to receive notifications when Windows events got triggered 
 
 ![screen shot 2017-09-14 at 6 55 37 pm](https://user-images.githubusercontent.com/5915590/30460753-69171ad2-997e-11e7-9179-77ddd00ebe47.png)
 
-All credit goes to Nicolas Prigent and his awesome blog [PowerShell Day-to-Day SysAdmin Tasks: Events and Monitoring](https://www.red-gate.com/simple-talk/sysadmin/powershell/powershell-day-to-day-sysadmin-tasks-events-and-monitoring/) 
 ------
